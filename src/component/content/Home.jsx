@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-
+import Base from './Base';
 
 class Home extends Component {
     state = {  } 
     render() { 
         return (
             <>
-                <h3>Home</h3>
+                <Base>
+                    Home page
+                </Base>
             </>
         );
     }

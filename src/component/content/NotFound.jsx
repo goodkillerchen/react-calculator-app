@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-
+import Base from './Base';
 
 class NotFound extends Component {
     state = {  } 
     render() { 
         return (
-            <h3>
-                The page is not found!!
-            </h3>
+            <>
+                <Base>404 not found !!</Base>
+            </>
         );
     }
 }

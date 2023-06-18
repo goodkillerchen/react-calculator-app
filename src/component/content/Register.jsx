@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Base from './Base';
 
 class Register extends Component {
     state = {  } 
     render() { 
         return (
             <>
-                <h3>Sign up</h3>
+                <Base>Sign up</Base>
             </>
         );
     }
