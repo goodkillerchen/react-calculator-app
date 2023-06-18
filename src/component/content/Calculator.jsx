@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Base from './Base';
+import { connect } from 'react-redux';
 
 class Calculator extends Component {
     state = {  } 
@@ -7,11 +8,10 @@ class Calculator extends Component {
         return (
             <>
                 <Base>
-
                     <div className='calculator'>
                         <div className='output'>
-                            <div className='last-output'>123*</div>
-                            <div className='current-output'>4569999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999</div>
+                            <div className='last-output'>{this.props.lastState} {this.props.operator}</div>
+                            <div className='current-output'>{this.props.currentState}</div>
                         </div>
                         <button className='firstline'>AC</button>
                         <button className='firstline'>+/-</button>
@@ -38,5 +38,13 @@ class Calculator extends Component {
         );
     }
 }
+
+const mapStateToProps = (state, props)=>{
+    return {
+        currentState:  state.currentState,
+        lastState: state.lastState,
+        operator: state.operator
+    }
+}
  
-export default Calculator;
+export default connect(mapStateToProps)(Calculator);
