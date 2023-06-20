@@ -7,7 +7,7 @@ class Base extends Component {
     render() { 
         return (
             <>
-                <div class='card' style={{marginTop: "20px"}}>
+                <div className='card' style={{marginTop: "20px"}}>
                     <div className='card-body'>
                         {this.props.children}
                     </div>

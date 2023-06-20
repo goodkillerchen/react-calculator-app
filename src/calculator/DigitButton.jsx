@@ -10,11 +10,24 @@ class DigitButton extends Component {
             this.props.add_digit(this.props.children)
         }
 
-        return (
-            <>
-                <button className='digit' onClick={handleEvent}>{this.props.children}</button>
-            </>
-        );
+        const handleKeyboard = (e)=>{
+            console.log(e.keyCode)
+        }
+
+        if(this.props.type === 'zero'){
+            return(
+                <>
+                    <button className='zero' onClick={handleEvent} onKeyDown={handleKeyboard}>{this.props.children}</button>
+                </>
+            );
+        }
+        else{
+            return (
+                <>
+                    <button className='digit' onClick={handleEvent} onKeyDown = {(e)=>handleKeyboard(e)}>{this.props.children}</button>
+                </>
+            );
+        }
     }
 }
 

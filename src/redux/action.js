@@ -6,4 +6,4 @@ const ACTIONS = {
     EVALUATE: "evaluate"
 }
 
-export default {ACTIONS}
+export default ACTIONS

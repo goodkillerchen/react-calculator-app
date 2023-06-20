@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Base from './Base';
 import { connect } from 'react-redux';
+import DigitButton from '../../calculator/DigitButton';
 
 class Calculator extends Component {
     state = {  } 
@@ -16,21 +17,21 @@ class Calculator extends Component {
                         <button className='firstline'>AC</button>
                         <button className='firstline'>+/-</button>
                         <button className='firstline'>DEL</button>
-                        <button className='operator'>÷</button>
-                        <button className='digit'>7</button>
-                        <button className='digit'>8</button>
-                        <button className='digit'>9</button>
+                        <button className='firstline'>÷</button>
+                        <DigitButton>7</DigitButton>
+                        <DigitButton>8</DigitButton>
+                        <DigitButton>9</DigitButton>
                         <button className='operator'>×</button>
-                        <button className='digit'>4</button>
-                        <button className='digit'>5</button>
-                        <button className='digit'>6</button>
+                        <DigitButton>4</DigitButton>
+                        <DigitButton>5</DigitButton>
+                        <DigitButton>6</DigitButton>
                         <button className='operator'>-</button>
-                        <button className='digit'>1</button>
-                        <button className='digit'>2</button>
-                        <button className='digit'>3</button>
+                        <DigitButton>1</DigitButton>
+                        <DigitButton>2</DigitButton>
+                        <DigitButton>3</DigitButton>
                         <button className='operator'>+</button>
-                        <button className='zero'>0</button>
-                        <button className='digit'>.</button>
+                        <DigitButton type="zero">0</DigitButton>
+                        <DigitButton>.</DigitButton>
                         <button className='operator'>=</button>
                     </div>
                 </Base>
