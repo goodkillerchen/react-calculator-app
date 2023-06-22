@@ -19,7 +19,7 @@ class Calculator extends Component {
                             <div className='current-output'>{this.props.currentState}</div>
                         </div>
                         <button className='firstline' onClick={this.props.clear}>AC</button>
-                        <button className='firstline'>+/-</button>
+                        <button className='firstline' onClick={this.props.opposite}>+/-</button>
                         <button className='firstline' onClick={this.props.delete}>DEL</button>
                         <OperatorButton>÷</OperatorButton>
                         <DigitButton>7</DigitButton>
@@ -61,6 +61,11 @@ const mapDispatchToProps = {
     delete: ()=>{
         return {
             type: ACTIONS.DELETE_DIGIT
+        }
+    },
+    opposite: ()=>{
+        return {
+            type: ACTIONS.OPPOSITE_OPERATOR
         }
     }
 }

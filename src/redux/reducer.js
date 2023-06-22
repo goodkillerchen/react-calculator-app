@@ -72,6 +72,12 @@ const reducer = (state = {
                 currentState: state.currentState.slice(0, -1),
                 override: false
             }
+        case ACTIONS.OPPOSITE_OPERATOR:
+            return {
+                ...state,
+                currentState: eval('-' + state.currentState).toString(),
+                override: false
+            }
         default:
             return state;
     }
