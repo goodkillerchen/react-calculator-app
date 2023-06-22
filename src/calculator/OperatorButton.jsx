@@ -10,8 +10,31 @@ class OperatorButton extends Component {
         
     }
     handleKeyPress = (e)=>{
-        if(e.key === this.props.children){
-            this.props.add_digit(this.props.children)
+        switch(this.props.children){
+            case('+'):
+                if(e.shiftKey && e.key === '='){
+                    this.props.choose_operator('+')
+                }
+                break;
+            case('-'):
+                if(e.key === ''){
+                    this.props.choose_operator('-')
+                }
+                break;
+            case('×'):
+                if(e.shiftKey && e.key === '*'){
+                    this.props.choose_operator('×')
+                }
+                break;
+            case('÷'):
+                if(e.key === '/'){
+                    this.props.choose_operator('÷')
+                }
+                break;
+            default:
+                if(e.key === 'Enter'){
+                    this.props.choose_operator('=')
+                }
         }
     }
     componentDidMount(){
