@@ -54,6 +54,24 @@ const reducer = (state = {
                     override: true
                 }
             }
+        case ACTIONS.CLEAR:
+            return {
+                currentState: "0",
+                lastState: "",
+                override: false
+            }
+        case ACTIONS.DELETE_DIGIT:
+            if(state.currentState.length === 1){
+                return {
+                    ...state,
+                    currentState: "0"
+                }
+            }
+            return {
+                ...state,
+                currentState: state.currentState.slice(0, -1),
+                override: false
+            }
         default:
             return state;
     }
