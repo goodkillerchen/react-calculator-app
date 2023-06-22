@@ -41,7 +41,7 @@ class OperatorButton extends Component {
         document.addEventListener("keydown", this.handleKeyPress, false);
     }
     componentWillUnmount(){
-        document.removeEventListener("keydown", this.handleEvent, false);
+        document.removeEventListener("keydown", this.handleKeyPress, false);
     }
     render() { 
         const handleEvent = ()=>{

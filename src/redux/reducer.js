@@ -1,3 +1,4 @@
+
 import ACTIONS from "./action"
 
 const reducer = (state = {
@@ -32,6 +33,14 @@ const reducer = (state = {
             }
         case ACTIONS.CHOOSE_OPERATOR:
             if(action.operator !== '='){
+                console.log(state.lastState.slice(-1))
+                if(['+', '-', '÷', '×'].includes(state.lastState.slice(-1))){
+                    console.log(state)
+                    return {
+                        ...state,
+                        lastState: state.lastState.slice(0, -1)+action.operator
+                    }
+                }
                 return {
                     ...state,
                     lastState: state.currentState + action.operator,

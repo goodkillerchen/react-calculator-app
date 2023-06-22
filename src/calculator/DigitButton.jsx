@@ -2,24 +2,30 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ACTIONS from '../redux/action';
 
+
 class DigitButton extends Component {
-    state = {  } 
+   
     constructor(props){
         super(props);
-        this.handleKeyPress = this.handleKeyPress.bind(this)
-        
+        this.digiButton = React.createRef()
+        this.handleKeyPress = this.handleKeyPress.bind(this);
     }
+
     handleKeyPress = (e)=>{
         if(e.key === this.props.children){
             this.props.add_digit(this.props.children)
         }
     }
+
+
     componentDidMount(){
         document.addEventListener("keydown", this.handleKeyPress, false);
     }
+
     componentWillUnmount(){
-        document.removeEventListener("keydown", this.handleEvent, false);
+        document.removeEventListener("keydown", this.handleKeyPress, false);
     }
+
     render() { 
 
         const handleEvent = ()=>{
@@ -30,14 +36,24 @@ class DigitButton extends Component {
         if(this.props.type === 'zero'){
             return(
                 <>
-                    <button className='zero' onClick={handleEvent}>{this.props.children}</button>
+                    <button ref={this.digiButton} 
+                        className='digit zero' 
+                        onClick={handleEvent} 
+                    >
+                            {this.props.children}
+                    </button>
                 </>
             );
         }
         else{
             return (
                 <>
-                    <button className='digit' onClick={handleEvent}>{this.props.children}</button>
+                    <button ref={this.digiButton} 
+                        className='digit'
+                        onClick={handleEvent}  
+                    >
+                            {this.props.children} 
+                    </button>
                 </>
             );
         }

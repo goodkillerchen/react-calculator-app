@@ -16,12 +16,15 @@ class Calculator extends Component {
         if(e.key === 'c'){
             this.props.clear()
         }
+        else if(e.key === 'Backspace'){
+            this.props.delete()
+        }
     }
     componentDidMount(){
         document.addEventListener("keydown", this.handleKeyPress, false);
     }
     componentWillUnmount(){
-        document.removeEventListener("keydown", this.handleEvent, false);
+        document.removeEventListener("keydown", this.handleKeyPress, false);
     }
 
     render() { 
