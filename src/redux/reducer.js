@@ -49,7 +49,7 @@ const reducer = (state = {
                 }
                 return {
                     ... state,
-                    currentState: eval(calLastState + state.currentState).toString(), //number -> string
+                    currentState: eval(calLastState + '(' + state.currentState +')').toString(), //number -> string
                     lastState: "",
                     override: true
                 }

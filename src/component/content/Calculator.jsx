@@ -7,7 +7,22 @@ import ACTIONS from '../../redux/action';
 
 class Calculator extends Component {
     state = {  } 
-
+    constructor(props){
+        super(props);
+        this.handleKeyPress = this.handleKeyPress.bind(this)
+        
+    }
+    handleKeyPress = (e)=>{
+        if(e.key === 'c'){
+            this.props.clear()
+        }
+    }
+    componentDidMount(){
+        document.addEventListener("keydown", this.handleKeyPress, false);
+    }
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.handleEvent, false);
+    }
 
     render() { 
         return (
