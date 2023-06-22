@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Base from './Base';
 import { connect } from 'react-redux';
 import DigitButton from '../../calculator/DigitButton';
+import OperatorButton from '../../calculator/OperatorButton';
 
 class Calculator extends Component {
     state = {  } 
@@ -19,22 +20,22 @@ class Calculator extends Component {
                         <button className='firstline'>AC</button>
                         <button className='firstline'>+/-</button>
                         <button className='firstline'>DEL</button>
-                        <button className='firstline'>÷</button>
+                        <OperatorButton>÷</OperatorButton>
                         <DigitButton>7</DigitButton>
                         <DigitButton>8</DigitButton>
                         <DigitButton>9</DigitButton>
-                        <button className='operator'>×</button>
+                        <OperatorButton>×</OperatorButton>
                         <DigitButton>4</DigitButton>
                         <DigitButton>5</DigitButton>
                         <DigitButton>6</DigitButton>
-                        <button className='operator'>-</button>
+                        <OperatorButton>-</OperatorButton>
                         <DigitButton>1</DigitButton>
                         <DigitButton>2</DigitButton>
                         <DigitButton>3</DigitButton>
-                        <button className='operator'>+</button>
+                        <OperatorButton>+</OperatorButton>
                         <DigitButton type="zero">0</DigitButton>
                         <DigitButton>.</DigitButton>
-                        <button className='operator'>=</button>
+                        <OperatorButton>=</OperatorButton>
                     </div>
                 </Base>
             </>
