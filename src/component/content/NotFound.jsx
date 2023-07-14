@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Base from './Base';
+import background from '../../resource/404.png'
 
 class NotFound extends Component {
     state = {  } 
     render() { 
-        return (
-            <>
-                <Base>404 not found !!</Base>
-            </>
+        return (   
+                <div style={{backgroundImage: `url(${background})`,  backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                width: '100vw',
+                height: '100vh'}}>
+                </div>
         );
     }
 }

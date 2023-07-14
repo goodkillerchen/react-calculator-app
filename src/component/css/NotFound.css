@@ -1,0 +1,4 @@
+.not-found {
+    background-image: url('/resource/404.png');
+    background-size: cover;
+}

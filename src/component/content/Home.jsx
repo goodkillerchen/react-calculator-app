@@ -7,7 +7,7 @@ class Home extends Component {
         return (
             <>
                 <Base>
-                    Home page
+                    When you login: you can 
                 </Base>
             </>
         );
