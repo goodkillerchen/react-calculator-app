@@ -7,7 +7,7 @@ class Home extends Component {
         return (
             <>
                 <Base>
-                    When you login: you can 
+                    Please sign in to unlock the function of online Calculator.
                 </Base>
             </>
         );
