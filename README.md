@@ -5,6 +5,13 @@ This project is mainly created by the `React framework`, `React Router` and `Rea
 
 # Demo
  + Login Page：![Alt text](/resource/signIn.png)
+ In this page you should input the username and password to login. If the username and password do not fulfill the requirement, it will have alert to tell you what's the problem.
+
+ + Register Page: ![Alt text](/resource/signUp.png)
+ When you sign up for account, you should obey the rule. Otherwise, a pop-up alert will prompt where there is an error.
+ 
+ + Calculator Page: ![Alt text](/resource/calculator.png)
+ When you have signed in, you will find that there is an additional option(calculator) in the navigation bar. The Sign in and Sign up change to the username and Quit. You can operate the calculator either by the keyboard or mouse. If you press the Quit, the calculator option will be disappeared and tags on the right angle will change back to the Sign in and Sign up.
 
 
 # How to run?

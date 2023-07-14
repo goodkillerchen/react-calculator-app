@@ -68,14 +68,16 @@ class Register extends Component {
                                     <div className="mb-3">
                                         <label htmlFor="username" className="form-label">Username</label>
                                         <input type="text" className="form-control username" name="username" onChange={e => {this.setState({username: e.target.value})}} />
+                                        <span style={{fontSize: '1px', color: 'red'}}>Length should be greater or equal to 8!</span>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="password" className="form-label">Password</label>
                                         <input type="password" className="form-control password" name="password" onChange={e => {this.setState({password: e.target.value})}} />
+                                        <span style={{fontSize: '1px', color: 'red'}}>Length should be greater or equal to 6!</span>
                                     </div>
                                     <div className="mb-3">
                                         <label htmlFor="password" className="form-label">Confirm Password</label>
-                                        <input type="password" className="form-control comfirm" name="confirm" onChange={e => {this.setState({password: e.target.value})}} />
+                                        <input type="password" className="form-control confirm" name="confirm" onChange={e => {this.setState({password: e.target.value})}} />
                                     </div>
                                     <button type="button" className="btn btn-primary btn-login" onClick={this.handleSignUpClick}> Sign up </button>
                                 </form>
