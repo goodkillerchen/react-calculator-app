@@ -10,14 +10,16 @@ class OperatorButton extends Component {
         
     }
     handleKeyPress = (e)=>{
+        console.log(e.key)
         switch(this.props.children){
+            
             case('+'):
-                if(e.shiftKey && e.key === '='){
+                if(e.shiftKey && e.key === '+'){
                     this.props.choose_operator('+')
                 }
                 break;
             case('-'):
-                if(e.key === ''){
+                if(e.key === '-'){
                     this.props.choose_operator('-')
                 }
                 break;
@@ -32,9 +34,10 @@ class OperatorButton extends Component {
                 }
                 break;
             default:
-                if(e.key === 'Enter'){
+                if(e.key === 'Enter' || e.key === '='){
                     this.props.choose_operator('=')
                 }
+                break
         }
     }
     componentDidMount(){
